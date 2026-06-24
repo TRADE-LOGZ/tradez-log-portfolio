@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tradez Log – Trading Journal & Analytics for Serious Traders</title>
-<meta name="description" content="Tradez Log is a trading journal and analytics platform for serious traders. Track trades, analyze performance, identify patterns, and become a consistently profitable trader.">
+<title>Tradez Log – Best Trading Journal App for Serious Traders</title>
+<meta name="description" content="Tradez Log is the best trading journal app for serious traders — a free trading journal to track trades, analyze performance, identify patterns, and build a consistently profitable trading edge.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Tradez Log">
 <meta name="theme-color" content="#1a1410">
 <link rel="canonical" href="https://tradezlog.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tradez Log – Trading Journal & Analytics for Serious Traders">
-<meta property="og:description" content="Tradez Log is a trading journal and analytics platform for serious traders. Track trades, analyze performance, identify patterns, and become a consistently profitable trader.">
+<meta property="og:title" content="Tradez Log – Best Trading Journal App for Serious Traders">
+<meta property="og:description" content="Tradez Log is the best trading journal app for serious traders — a free trading journal to track trades, analyze performance, identify patterns, and build a consistently profitable trading edge.">
 <meta property="og:url" content="https://tradezlog.com/">
 <meta property="og:site_name" content="Tradez Log">
 <meta property="og:image" content="https://tradezlog.com/assets/og-image.png">
@@ -48,10 +48,11 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --cream:#f9f8f7;--warm:#f4f0eb;--tan:#e8e0d5;
-  --dk:#1a1410;--mid:#453a2e;--lt:#7a6a58;
-  --blue:#2a6fdb;--green:#0ea158;--green-l:#e6f7ef;
-  --sky:#9cc1e7;--peach:#eddfd0;--bdr:#d6cec5;
+  --cream:#ffffff;--warm:#f1f5ff;--tan:#dbe6fb;
+  --dk:#0b0f1a;--mid:#454b5c;--lt:#6c7587;
+  --blue:#155eef;--green:#12b76a;--green-l:#e3fbef;
+  --sky:#bcd4ff;--peach:#c8f5dd;--bdr:#c7d3ea;
+  --accent:linear-gradient(135deg,#155eef 0%,#12b76a 100%);
   --rp:100px;--rlg:28px;--rmd:20px;
   --fh:"Plus Jakarta Sans",sans-serif;--fb:"DM Sans",sans-serif;
 }
@@ -68,13 +69,13 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .nlinks a{padding:9px 18px;border-radius:var(--rp);font-size:16px;font-weight:500;color:var(--mid);transition:color .15s;position:relative}
 .nlinks a::after{content:"";position:absolute;bottom:4px;left:50%;transform:translateX(-50%) scaleX(0);width:16px;height:2px;border-radius:2px;background:var(--dk);transition:transform .2s}
 .nlinks a:hover{color:var(--dk)}.nlinks a:hover::after{transform:translateX(-50%) scaleX(1)}
-.ncta{background:var(--dk);color:#fff;padding:13px 28px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
-.ncta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,20,16,.25)}
+.ncta{background:var(--accent);color:#fff;padding:13px 28px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.ncta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(21,94,239,.35)}
 
 /* HAMBURGER */
 .hamburger{flex-direction:column;justify-content:center;align-items:center;width:40px;height:40px;background:rgba(255,255,255,.6);border:1px solid rgba(214,206,197,.8);border-radius:12px;cursor:pointer;gap:5px;padding:0;transition:background .2s,transform .3s cubic-bezier(.34,1.56,.64,1);flex-shrink:0;color:var(--dk);display:none}
 .hamburger:hover{background:#fff;transform:scale(1.08)}
-.hamburger.open{background:var(--dk);color:#fff;border-color:var(--dk)}
+.hamburger.open{background:var(--accent);color:#fff;border-color:transparent}
 .hicon{transition:all .2s;flex-shrink:0}
 .hicon-close{display:none}
 
@@ -88,8 +89,8 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .mm-link{display:flex;align-items:center;justify-content:space-between;padding:15px 4px;font-size:20px;font-weight:700;font-family:var(--fh);color:var(--dk);border-bottom:1px solid rgba(214,206,197,.5);letter-spacing:-.025em;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s,color .15s}
 .mm-link svg{opacity:.3;flex-shrink:0;transition:opacity .2s,transform .2s}
 .mm-link:hover{color:var(--blue)}.mm-link:hover svg{opacity:.7;transform:translateX(4px)}
-.mm-cta{display:block;width:100%;margin-top:24px;background:var(--dk);color:#fff;padding:16px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;text-align:center;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
-.mm-cta:hover{box-shadow:0 8px 24px rgba(26,20,16,.25)}
+.mm-cta{display:block;width:100%;margin-top:24px;background:var(--accent);color:#fff;padding:16px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;text-align:center;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.mm-cta:hover{box-shadow:0 8px 24px rgba(21,94,239,.35)}
 
 /* HERO */
 .hero{min-height:100vh;background:linear-gradient(180deg,var(--sky) 0%,var(--cream) 50%,var(--warm) 72%,var(--peach) 130%);display:flex;flex-direction:column;align-items:center;padding:168px 24px 0;text-align:center;position:relative;overflow:hidden}
@@ -101,14 +102,14 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .word{display:inline-block;opacity:0;filter:blur(10px);transform:translateY(12px);animation:win .65s cubic-bezier(.22,1,.36,1) forwards}
 @keyframes win{to{opacity:1;filter:blur(0);transform:translateY(0)}}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.5);border:1px solid var(--bdr);border-radius:var(--rp);padding:8px 20px 8px 10px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--lt);margin-bottom:32px;opacity:0;animation:fup .6s .1s cubic-bezier(.22,1,.36,1) forwards}
-.hero-badge b{background:var(--dk);color:#fff;border-radius:var(--rp);padding:3px 10px;font-size:11px;font-weight:700}
+.hero-badge b{background:var(--accent);color:#fff;border-radius:var(--rp);padding:3px 10px;font-size:11px;font-weight:700}
 .hero h1{font-family:var(--fh);font-size:clamp(48px,8.5vw,108px);font-weight:800;letter-spacing:-.04em;line-height:1.04;max-width:1000px;color:var(--dk);margin-bottom:28px}
 .hero h1 em{font-style:normal;color:var(--blue)}
 .hero-sub{font-size:clamp(17px,2.2vw,24px);color:var(--mid);max-width:680px;line-height:1.65;margin-bottom:44px;opacity:0;animation:fup .7s 1.35s cubic-bezier(.22,1,.36,1) forwards}
 .hero-btns{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:72px;opacity:0;animation:fup .7s 1.55s cubic-bezier(.22,1,.36,1) forwards}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:600;font-size:16px;border-radius:var(--rp);cursor:pointer;border:none;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,background .2s}
-.btn-dark{background:var(--dk);color:#fff;padding:18px 36px}
-.btn-dark:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(26,20,16,.28)}
+.btn-dark{background:var(--accent);color:#fff;padding:18px 36px}
+.btn-dark:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(21,94,239,.38)}
 .btn-outline{background:rgba(255,255,255,.3);color:var(--dk);padding:18px 36px;border:1px solid rgba(26,20,16,.14)}
 .btn-outline:hover{background:rgba(255,255,255,.6);transform:translateY(-2px)}
 .btn-sm{padding:13px 26px;font-size:14px}
@@ -162,7 +163,7 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .dev-in{max-width:1072px;margin:0 auto}
 .dev-tabs{display:flex;gap:8px;justify-content:center;margin-top:38px}
 .dtab{background:rgba(255,255,255,.4);border:1px solid rgba(26,20,16,.12);border-radius:var(--rp);padding:10px 24px;font-size:13px;font-weight:600;font-family:var(--fh);cursor:pointer;transition:all .25s cubic-bezier(.34,1.56,.64,1)}
-.dtab.on{background:var(--dk);color:#fff;border-color:transparent;transform:scale(1.04)}
+.dtab.on{background:var(--accent);color:#fff;border-color:transparent;transform:scale(1.04)}
 .dev-frame{margin-top:30px;border-radius:var(--rlg);overflow:hidden;border:2px solid var(--bdr);background:#fff;box-shadow:0 4px 40px rgba(26,20,16,.1);transition:transform .4s cubic-bezier(.22,1,.36,1)}
 .dev-frame:hover{transform:translateY(-5px)}
 
@@ -228,11 +229,11 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .pdesc{font-size:13px;color:var(--lt);margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid rgba(214,206,197,.6)}
 .pfeat{list-style:none;display:flex;flex-direction:column;gap:11px;flex:1;margin-bottom:26px}
 .pfeat li{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--mid)}
-.pfeat li::before{content:"✓";width:17px;height:17px;min-width:17px;background:var(--dk);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700}
+.pfeat li::before{content:"✓";width:17px;height:17px;min-width:17px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700}
 .pfeat li.na{color:#b0a89e;text-decoration:line-through}
 .pfeat li.na::before{content:"✓";background:#d6cec5;color:#fff}
 .sbadge2{display:inline-flex;align-items:center;padding:2px 8px;background:#e8f7ee;color:#0a7a40;border:1px solid #0ea158;border-radius:var(--rp);font-size:10px;font-weight:600;margin-left:5px}
-.pbtnp{width:100%;background:var(--dk);color:#fff;padding:13px;border-radius:var(--rp);font-size:14px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;transition:opacity .15s,transform .25s cubic-bezier(.34,1.56,.64,1)}
+.pbtnp{width:100%;background:var(--accent);color:#fff;padding:13px;border-radius:var(--rp);font-size:14px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;transition:opacity .15s,transform .25s cubic-bezier(.34,1.56,.64,1)}
 .pbtnp:hover{opacity:.87;transform:translateY(-2px)}
 .pbtns{width:100%;background:var(--warm);color:var(--dk);padding:13px;border-radius:var(--rp);font-size:14px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;transition:background .2s,transform .25s cubic-bezier(.34,1.56,.64,1)}
 .pbtns:hover{background:var(--tan);transform:translateY(-2px)}
@@ -244,21 +245,24 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .bfeat:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(26,20,16,.1)}
 .bfeat-img{background:linear-gradient(135deg,var(--sky),var(--peach));height:300px;display:flex;align-items:center;justify-content:center;font-size:76px}
 .bfeat-cnt{padding:38px}
-.bftag{display:inline-flex;padding:4px 12px;background:var(--dk);color:#fff;border-radius:var(--rp);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+.bftag{display:inline-flex;padding:4px 12px;background:var(--accent);color:#fff;border-radius:var(--rp);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
 .bftit{font-family:var(--fh);font-size:23px;font-weight:700;color:var(--dk);letter-spacing:-.02em;line-height:1.25;margin-bottom:11px}
 .bfdesc{font-size:14px;color:var(--mid);line-height:1.65}
 .bfauth{display:flex;align-items:center;gap:9px;margin-top:22px;padding-top:18px;border-top:1px solid var(--tan)}
 .bfavt{width:34px;height:34px;border-radius:50%;background:var(--tan);display:flex;align-items:center;justify-content:center;font-size:15px}
 .bfname{font-size:13px;font-weight:700;color:var(--dk)}
 .bfrole{font-size:11px;color:var(--lt)}
-.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
-.bgcard{background:rgba(255,255,255,.7);border:1px solid var(--bdr);border-radius:var(--rmd);overflow:hidden;cursor:pointer;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .35s}
-.bgcard:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(26,20,16,.1)}
-.bgcard-img{height:160px;display:flex;align-items:center;justify-content:center;font-size:48px;overflow:hidden;transition:transform .3s}
-.bgcard:hover .bgcard-img{transform:scale(1.06)}
-.bgcard-body{padding:16px}
-.bctag{display:inline-flex;padding:3px 10px;border-radius:var(--rp);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:9px}
-.t-blue{background:#dbeafe;color:#1d4ed8}.t-amber{background:#fef3c7;color:#92400e}.t-green{background:#dcfce7;color:#15803d}
+.bcarousel{margin-top:52px}
+.bcarousel-viewport{overflow:hidden;border-radius:var(--rlg)}
+.bcarousel-track{display:flex;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.bslide{flex:0 0 100%;margin-top:0;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+.bcarousel-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:24px}
+.bcarousel-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--bdr);background:rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;font-size:18px;line-height:1;cursor:pointer;color:var(--dk);transition:background .2s,transform .2s}
+.bcarousel-btn:hover{background:#fff;transform:translateY(-2px)}
+.bcarousel-btn:disabled{opacity:.35;cursor:default;transform:none}
+.bcarousel-dots{display:flex;align-items:center;gap:7px}
+.bdot{width:7px;height:7px;border-radius:50%;background:var(--bdr);cursor:pointer;transition:background .2s,transform .2s}
+.bdot.active{background:var(--dk);transform:scale(1.35)}
 .bctit{font-family:var(--fh);font-size:15px;font-weight:700;color:var(--dk);line-height:1.35;letter-spacing:-.01em}
 
 /* COMMUNITY */
@@ -275,8 +279,8 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .cc-desc{font-size:14px;color:var(--mid);line-height:1.65;margin-bottom:22px}
 
 /* ENQUIRY FLOATING BUTTON */
-.enq-btn{position:fixed;bottom:28px;right:28px;z-index:500;display:flex;align-items:center;gap:10px;background:var(--dk);color:#fff;padding:14px 22px;border-radius:var(--rp);font-size:14px;font-weight:700;font-family:var(--fh);border:none;cursor:pointer;box-shadow:0 8px 32px rgba(26,20,16,.28);transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .35s}
-.enq-btn:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 16px 40px rgba(26,20,16,.32)}
+.enq-btn{position:fixed;bottom:28px;right:28px;z-index:500;display:flex;align-items:center;gap:10px;background:var(--accent);color:#fff;padding:14px 22px;border-radius:var(--rp);font-size:14px;font-weight:700;font-family:var(--fh);border:none;cursor:pointer;box-shadow:0 8px 32px rgba(26,20,16,.28);transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .35s}
+.enq-btn:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 16px 40px rgba(21,94,239,.4)}
 .enq-btn svg{flex-shrink:0}
 
 /* ENQUIRY MODAL */
@@ -297,8 +301,8 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .cfield input:focus,.cfield textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(42,111,219,.1);background:#fff}
 .cfield textarea{min-height:90px;line-height:1.6}
 .cfield input::placeholder,.cfield textarea::placeholder{color:var(--lt);opacity:.7}
-.cform-submit{background:var(--dk);color:#fff;padding:13px;border-radius:var(--rp);font-size:14px;font-weight:700;font-family:var(--fh);border:none;cursor:pointer;width:100%;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;margin-top:2px}
-.cform-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,20,16,.25)}
+.cform-submit{background:var(--accent);color:#fff;padding:13px;border-radius:var(--rp);font-size:14px;font-weight:700;font-family:var(--fh);border:none;cursor:pointer;width:100%;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;margin-top:2px}
+.cform-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(21,94,239,.35)}
 .cform-success{display:none;background:var(--green-l);border:1px solid rgba(14,161,88,.25);border-radius:14px;padding:14px 18px;font-size:14px;color:#0a7a44;font-weight:500;text-align:center}
 
 /* CTA */
@@ -317,7 +321,7 @@ footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px sol
 .ft-logo{margin-bottom:13px}
 .ft-tag{font-size:13px;color:var(--lt);line-height:1.65;margin-bottom:18px}
 .ft-soc{display:flex;gap:7px}
-.ft-si{width:34px;height:34px;border-radius:50%;background:var(--dk);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;transition:opacity .15s,transform .25s cubic-bezier(.34,1.56,.64,1)}
+.ft-si{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;transition:opacity .15s,transform .25s cubic-bezier(.34,1.56,.64,1)}
 .ft-si:hover{opacity:.75;transform:translateY(-3px)}
 .ft-links{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
 .ft-ct{font-size:10px;font-weight:700;color:var(--dk);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
@@ -369,7 +373,7 @@ footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px sol
 }
 /* ACCESSIBILITY */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.skip-link{position:absolute;top:-100%;left:0;z-index:9999;background:var(--dk);color:#fff;padding:12px 20px;font-size:14px;font-weight:600;border-radius:0 0 8px 0;transition:top .2s}
+.skip-link{position:absolute;top:-100%;left:0;z-index:9999;background:var(--accent);color:#fff;padding:12px 20px;font-size:14px;font-weight:600;border-radius:0 0 8px 0;transition:top .2s}
 .skip-link:focus{top:0}
 *:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
@@ -384,7 +388,7 @@ footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px sol
   <div class="nlinks">
     <a href="#features">Features</a><a href="#benefits">Benefits</a>
     <a href="#pricing">Pricing</a>
-    <!-- <a href="#blog">Blog</a>-->
+    <a href="blog.html">Blog</a>
      <a href="#contact">Contact</a>
      <a href="about-us.html">About</a>
   </div>
@@ -408,7 +412,7 @@ footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px sol
     <a href="#features" class="mm-link">Features <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="#benefits" class="mm-link">Benefits <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="#pricing" class="mm-link">Pricing <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <!-- <a href="#blog" class="mm-link">Blog <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a> -->
+    <a href="blog.html" class="mm-link">Blog <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="#contact" class="mm-link">Contact <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="about-us.html" class="mm-link">About <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <button type="button" class="mm-cta" onclick="window.location.href='https://app.tradezlog.com/login'">Sign In →</button>
@@ -422,7 +426,7 @@ footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px sol
   <div class="cloud cloud-r" aria-hidden="true"><svg viewBox="0 0 420 230" fill="none"><ellipse cx="210" cy="148" rx="195" ry="82" fill="#eddfd0" opacity=".55"/><ellipse cx="280" cy="105" rx="115" ry="68" fill="#eddfd0" opacity=".45"/><ellipse cx="125" cy="95" rx="92" ry="58" fill="#f0e8de" opacity=".4"/></svg></div>
   <div class="hero-badge"><b>NEW</b> AI-powered trade analysis is here</div>
   <h1 id="h1"></h1>
-  <p class="hero-sub">The all-in-one trading journal for active traders. Log trades, analyze patterns, and grow your edge — without the chaos.</p>
+  <p class="hero-sub">The best trading journal app for active traders — free to start. Log trades, analyze patterns, and grow your edge without the chaos.</p>
   <div class="hero-btns">
     <button type="button" class="btn btn-dark" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1v10M3 7l5 5 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Start for free</button>
     <!-- <button class="btn btn-outline">See how it works →</button> -->
@@ -759,26 +763,59 @@ footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px sol
 </section>
 
 <!-- BLOG -->
-<!-- <section id="blog" class="blog-sec">
+<section id="blog" class="blog-sec">
   <div class="blog-in">
     <p class="eye rv">Blog</p>
     <h2 class="hd rv d1">Ideas to level-up<br>your trading game</h2>
-    <div class="bfeat rv d2">
-      <div class="bfeat-img">📈</div>
-      <div class="bfeat-cnt">
-        <div class="bftag">Must Read</div>
-        <div class="bftit">How to build a consistent trading strategy using journal data</div>
-        <div class="bfdesc">Learn how reviewing your past trades systematically can unlock hidden patterns and help you build a truly repeatable edge in the markets.</div>
-        <div class="bfauth"><div class="bfavt">👩</div><div><div class="bfname">Ananya Rajan</div><div class="bfrole">Head of Research, Tradez Log</div></div></div>
+    <div class="bcarousel rv d2">
+      <div class="bcarousel-viewport">
+      <div class="bcarousel-track" id="blogTrack">
+        <a class="bfeat bslide" href="blog.html" aria-label="Read: Journaling: Secure Your Future Trades">
+          <div class="bfeat-img">📈</div>
+          <div class="bfeat-cnt">
+            <div class="bftag">Must Read</div>
+            <div class="bftit">Journaling: Secure Your Future Trades</div>
+            <div class="bfdesc">A trader's honest account of going from blown accounts to breakeven — and the role journaling played in getting there.</div>
+            <div class="bfauth"><div class="bfavt">🧑</div><div><div class="bfname">Akhil Dhore</div><div class="bfrole">User of Tradez Log</div></div></div>
+          </div>
+        </a>
+        <a class="bfeat bslide" href="best-trading-journal-app.html" aria-label="Read: Best Trading Journal App in 2026: What Actually Matters">
+          <div class="bfeat-img">📊</div>
+          <div class="bfeat-cnt">
+            <div class="bftag">Guide</div>
+            <div class="bftit">Best Trading Journal App in 2026: What Actually Matters</div>
+            <div class="bfdesc">A no-fluff comparison of free and paid trading journal apps — and what actually separates the ones worth keeping.</div>
+            <div class="bfauth"><div class="bfavt">📊</div><div><div class="bfname">Tradez Log Team</div><div class="bfrole">Editorial</div></div></div>
+          </div>
+        </a>
+        <a class="bfeat bslide" href="trading-journal-template.html" aria-label="Read: Trading Journal Template: Excel vs Notion vs an App">
+          <div class="bfeat-img">📋</div>
+          <div class="bfeat-cnt">
+            <div class="bftag">Guide</div>
+            <div class="bftit">Trading Journal Template: Excel vs Notion vs an App</div>
+            <div class="bfdesc">Comparing a trading journal template in Excel, a Notion trading journal, and a dedicated app — and where each one breaks down.</div>
+            <div class="bfauth"><div class="bfavt">📋</div><div><div class="bfname">Tradez Log Team</div><div class="bfrole">Editorial</div></div></div>
+          </div>
+        </a>
+        <a class="bfeat bslide" href="what-is-a-trading-journal.html" aria-label="Read: What Is a Trading Journal? A Beginner's Guide">
+          <div class="bfeat-img">📓</div>
+          <div class="bfeat-cnt">
+            <div class="bftag">Guide</div>
+            <div class="bftit">What Is a Trading Journal? A Beginner's Guide</div>
+            <div class="bfdesc">What a trading journal actually is, what it should contain, and why traders who keep one outperform those who don't.</div>
+            <div class="bfauth"><div class="bfavt">📓</div><div><div class="bfname">Tradez Log Team</div><div class="bfrole">Editorial</div></div></div>
+          </div>
+        </a>
+      </div>
+      </div>
+      <div class="bcarousel-nav">
+        <button type="button" class="bcarousel-btn" id="blogPrev" aria-label="Previous blog post">‹</button>
+        <div class="bcarousel-dots" id="blogDots"></div>
+        <button type="button" class="bcarousel-btn" id="blogNext" aria-label="Next blog post">›</button>
       </div>
     </div>
-    <div class="bgrid">
-      <div class="bgcard rv d1"><div class="bgcard-img" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe)">💻</div><div class="bgcard-body"><div class="bctag t-blue">Tools</div><div class="bctit">Top 8 trading journal software in 2026</div></div></div>
-      <div class="bgcard rv d2"><div class="bgcard-img" style="background:linear-gradient(135deg,#fef9c3,#fde68a)">☁️</div><div class="bgcard-body"><div class="bctag t-amber">Insight</div><div class="bctit">A complete guide to trade review in 2026</div></div></div>
-      <div class="bgcard rv d3"><div class="bgcard-img" style="background:linear-gradient(135deg,#dcfce7,#bbf7d0)">🧮</div><div class="bgcard-body"><div class="bctag t-green">Management</div><div class="bctit">What is a profit factor and why it matters</div></div></div>
-    </div>
   </div>
-</section> -->
+</section>
 
 <!-- COMMUNITY -->
 <section id="contact" class="comm-sec">
@@ -821,7 +858,7 @@ footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px sol
       </div>
       <div class="ft-links">
         <div class="ft-col"><div class="ft-ct">Pages</div><a href="#">Home</a><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="about-us.html">About Us</a>
-        <!-- <a href="#blog">Blog</a> -->
+        <a href="blog.html">Blog</a>
       </div>
         <div class="ft-col"><div class="ft-ct">Information</div><a href="#contact">Contact</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="#">Changelog</a></div>
       </div>
@@ -833,6 +870,31 @@ footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px sol
 <script>
 const nav = document.getElementById("nav");
 window.addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 60), {passive:true});
+
+(function(){
+  const track = document.getElementById("blogTrack");
+  if(!track) return;
+  const slides = Array.from(track.children);
+  const dotsWrap = document.getElementById("blogDots");
+  const prevBtn = document.getElementById("blogPrev");
+  const nextBtn = document.getElementById("blogNext");
+  let idx = 0;
+  slides.forEach((_, i) => {
+    const d = document.createElement("span");
+    d.className = "bdot" + (i === 0 ? " active" : "");
+    d.addEventListener("click", () => go(i));
+    dotsWrap.appendChild(d);
+  });
+  function go(i){
+    idx = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    dotsWrap.querySelectorAll(".bdot").forEach((d, j) => d.classList.toggle("active", j === idx));
+  }
+  prevBtn.addEventListener("click", () => go(idx - 1));
+  nextBtn.addEventListener("click", () => go(idx + 1));
+  prevBtn.disabled = slides.length <= 1;
+  nextBtn.disabled = slides.length <= 1;
+})();
 
 (function(){
   const h1 = document.getElementById("h1");

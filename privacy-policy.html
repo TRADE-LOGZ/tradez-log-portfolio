@@ -13,10 +13,11 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --cream:#f9f8f7;--warm:#f4f0eb;--tan:#e8e0d5;
-  --dk:#1a1410;--mid:#453a2e;--lt:#7a6a58;
-  --blue:#2a6fdb;--green:#0ea158;--green-l:#e6f7ef;
-  --sky:#9cc1e7;--peach:#eddfd0;--bdr:#d6cec5;
+  --cream:#ffffff;--warm:#f1f5ff;--tan:#dbe6fb;
+  --dk:#0b0f1a;--mid:#454b5c;--lt:#6c7587;
+  --blue:#155eef;--green:#12b76a;--green-l:#e3fbef;
+  --sky:#bcd4ff;--peach:#c8f5dd;--bdr:#c7d3ea;
+  --accent:linear-gradient(135deg,#155eef 0%,#12b76a 100%);
   --rp:100px;--rlg:28px;--rmd:20px;
   --fh:"Plus Jakarta Sans",sans-serif;--fb:"DM Sans",sans-serif;
 }
@@ -30,11 +31,11 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .nlinks a{padding:9px 18px;border-radius:var(--rp);font-size:16px;font-weight:500;color:var(--mid);transition:color .15s;position:relative}
 .nlinks a::after{content:"";position:absolute;bottom:4px;left:50%;transform:translateX(-50%) scaleX(0);width:16px;height:2px;border-radius:2px;background:var(--dk);transition:transform .2s}
 .nlinks a:hover{color:var(--dk)}.nlinks a:hover::after{transform:translateX(-50%) scaleX(1)}
-.ncta{background:var(--dk);color:#fff;padding:13px 28px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
-.ncta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,20,16,.25)}
+.ncta{background:var(--accent);color:#fff;padding:13px 28px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.ncta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(21,94,239,.35)}
 .hamburger{flex-direction:column;justify-content:center;align-items:center;width:40px;height:40px;background:rgba(255,255,255,.6);border:1px solid rgba(214,206,197,.8);border-radius:12px;cursor:pointer;gap:5px;padding:0;transition:background .2s,transform .3s cubic-bezier(.34,1.56,.64,1);flex-shrink:0;color:var(--dk);display:none}
 .hamburger:hover{background:#fff;transform:scale(1.08)}
-.hamburger.open{background:var(--dk);color:#fff;border-color:var(--dk)}
+.hamburger.open{background:var(--accent);color:#fff;border-color:transparent}
 .hicon{transition:all .2s;flex-shrink:0}
 .hicon-close{display:none}
 .mobile-menu{position:fixed;inset:0;z-index:190;pointer-events:none}
@@ -46,15 +47,15 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .mm-link{display:flex;align-items:center;justify-content:space-between;padding:15px 4px;font-size:20px;font-weight:700;font-family:var(--fh);color:var(--dk);border-bottom:1px solid rgba(214,206,197,.5);letter-spacing:-.025em;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s,color .15s}
 .mm-link svg{opacity:.3;flex-shrink:0;transition:opacity .2s,transform .2s}
 .mm-link:hover{color:var(--blue)}.mm-link:hover svg{opacity:.7;transform:translateX(4px)}
-.mm-cta{display:block;width:100%;margin-top:24px;background:var(--dk);color:#fff;padding:16px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;text-align:center;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
-.mm-cta:hover{box-shadow:0 8px 24px rgba(26,20,16,.25)}
+.mm-cta{display:block;width:100%;margin-top:24px;background:var(--accent);color:#fff;padding:16px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;text-align:center;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.mm-cta:hover{box-shadow:0 8px 24px rgba(21,94,239,.35)}
 footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px solid rgba(214,206,197,.44);border-radius:var(--rlg);margin:0 16px 24px;padding:46px}
 .ft-in{max-width:1040px;margin:0 auto}
 .ft-top{display:grid;grid-template-columns:240px 1fr;gap:80px;margin-bottom:38px}
 .ft-logo{margin-bottom:13px}
 .ft-tag{font-size:13px;color:var(--lt);line-height:1.65;margin-bottom:18px}
 .ft-soc{display:flex;gap:7px}
-.ft-si{width:34px;height:34px;border-radius:50%;background:var(--dk);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;transition:opacity .15s,transform .25s cubic-bezier(.34,1.56,.64,1)}
+.ft-si{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;transition:opacity .15s,transform .25s cubic-bezier(.34,1.56,.64,1)}
 .ft-si:hover{opacity:.75;transform:translateY(-3px)}
 .ft-links{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
 .ft-ct{font-size:10px;font-weight:700;color:var(--dk);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
@@ -65,7 +66,7 @@ footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px sol
 .ft-bot a:hover{color:var(--dk)}
 .policy-hero{padding:140px 24px 72px;text-align:center;background:linear-gradient(180deg,var(--sky) 0%,var(--cream) 60%)}
 .policy-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.5);border:1px solid var(--bdr);border-radius:var(--rp);padding:8px 20px 8px 10px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--lt);margin-bottom:26px}
-.policy-hero-badge b{background:var(--dk);color:#fff;border-radius:var(--rp);padding:3px 10px;font-size:11px;font-weight:700}
+.policy-hero-badge b{background:var(--accent);color:#fff;border-radius:var(--rp);padding:3px 10px;font-size:11px;font-weight:700}
 .policy-hero h1{font-family:var(--fh);font-size:clamp(36px,6vw,68px);font-weight:800;letter-spacing:-.04em;line-height:1.08;color:var(--dk);margin-bottom:18px}
 .policy-hero p{font-size:16px;color:var(--lt);max-width:560px;margin:0 auto}
 .policy-body{max-width:780px;margin:0 auto;padding:64px 24px 80px}
@@ -209,7 +210,7 @@ footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px sol
         <div class="ft-soc"><a class="ft-si" href="#">&#120143;</a><a class="ft-si" href="#" style="font-size:10px">YT</a><a class="ft-si" href="#" style="font-size:10px">in</a></div>
       </div>
       <div class="ft-links">
-        <div class="ft-col"><div class="ft-ct">Pages</div><a href="index.html">Home</a><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a href="index.html#blog">Blog</a></div>
+        <div class="ft-col"><div class="ft-ct">Pages</div><a href="index.html">Home</a><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a href="blog.html">Blog</a></div>
         <div class="ft-col"><div class="ft-ct">Information</div><a href="index.html#contact">Contact</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="#">Changelog</a></div>
       </div>
     </div>

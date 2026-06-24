@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About Tradez Log — Trading Journal & Performance Review</title>
-<meta name="description" content="Learn why Tradez Log was built and how our trading journal helps traders track trades, review mistakes, and build consistency over time.">
+<meta name="description" content="Learn why Tradez Log was built and how our trading journal app helps traders track trades, review mistakes, and build consistency — the best free trading journal for serious traders.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Tradez Log">
 <meta property="og:type" content="website">
 <meta property="og:title" content="About Tradez Log — Trading Journal & Performance Review">
-<meta property="og:description" content="Learn why Tradez Log was built and how our trading journal helps traders track trades, review mistakes, and build consistency over time.">
+<meta property="og:description" content="Learn why Tradez Log was built and how our trading journal app helps traders track trades, review mistakes, and build consistency — the best free trading journal for serious traders.">
 <meta property="og:url" content="https://tradezlog.com/about-us.html">
 <meta property="og:site_name" content="Tradez Log">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -17,10 +17,11 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --cream:#f9f8f7;--warm:#f4f0eb;--tan:#e8e0d5;
-  --dk:#1a1410;--mid:#453a2e;--lt:#7a6a58;
-  --blue:#2a6fdb;--green:#0ea158;--green-l:#e6f7ef;
-  --sky:#9cc1e7;--peach:#eddfd0;--bdr:#d6cec5;
+  --cream:#ffffff;--warm:#f1f5ff;--tan:#dbe6fb;
+  --dk:#0b0f1a;--mid:#454b5c;--lt:#6c7587;
+  --blue:#155eef;--green:#12b76a;--green-l:#e3fbef;
+  --sky:#bcd4ff;--peach:#c8f5dd;--bdr:#c7d3ea;
+  --accent:linear-gradient(135deg,#155eef 0%,#12b76a 100%);
   --rp:100px;--rlg:28px;--rmd:20px;
   --fh:"Plus Jakarta Sans",sans-serif;--fb:"DM Sans",sans-serif;
 }
@@ -37,11 +38,11 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .nlinks a::after{content:"";position:absolute;bottom:4px;left:50%;transform:translateX(-50%) scaleX(0);width:16px;height:2px;border-radius:2px;background:var(--dk);transition:transform .2s}
 .nlinks a:hover{color:var(--dk)}
 .nlinks a:hover::after{transform:translateX(-50%) scaleX(1)}
-.ncta{background:var(--dk);color:#fff;padding:13px 28px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
-.ncta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,20,16,.25)}
+.ncta{background:var(--accent);color:#fff;padding:13px 28px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.ncta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(21,94,239,.35)}
 .hamburger{flex-direction:column;justify-content:center;align-items:center;width:40px;height:40px;background:rgba(255,255,255,.6);border:1px solid rgba(214,206,197,.8);border-radius:12px;cursor:pointer;gap:5px;padding:0;transition:background .2s,transform .3s cubic-bezier(.34,1.56,.64,1);flex-shrink:0;color:var(--dk);display:none}
 .hamburger:hover{background:#fff;transform:scale(1.08)}
-.hamburger.open{background:var(--dk);color:#fff;border-color:var(--dk)}
+.hamburger.open{background:var(--accent);color:#fff;border-color:transparent}
 .mobile-menu{position:fixed;inset:0;z-index:190;pointer-events:none}
 .mobile-menu-backdrop{position:absolute;inset:0;background:rgba(26,20,16,.25);opacity:0;transition:opacity .3s}
 .mobile-menu-panel{position:absolute;top:0;left:0;right:0;background:rgba(249,248,247,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(214,206,197,.6);border-radius:0 0 28px 28px;padding:90px 24px 32px;transform:translateY(-105%);transition:transform .45s cubic-bezier(.22,1,.36,1);box-shadow:0 16px 56px rgba(26,20,16,.15);z-index:191}
@@ -52,8 +53,8 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .mm-link svg{opacity:.3;flex-shrink:0;transition:opacity .2s,transform .2s}
 .mm-link:hover{color:var(--blue)}
 .mm-link:hover svg{opacity:.7;transform:translateX(4px)}
-.mm-cta{display:block;width:100%;margin-top:24px;background:var(--dk);color:#fff;padding:16px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
-.mm-cta:hover{box-shadow:0 8px 24px rgba(26,20,16,.25)}
+.mm-cta{display:block;width:100%;margin-top:24px;background:var(--accent);color:#fff;padding:16px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.mm-cta:hover{box-shadow:0 8px 24px rgba(21,94,239,.35)}
 
 /* HERO */
 .hero{min-height:90vh;background:linear-gradient(180deg,var(--sky) 0%,var(--cream) 44%,var(--warm) 72%,var(--peach) 130%);display:flex;flex-direction:column;align-items:center;padding:180px 24px 90px;text-align:center;position:relative;overflow:hidden}
@@ -64,8 +65,8 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .hero p{font-size:clamp(17px,2vw,21px);color:var(--mid);max-width:620px;line-height:1.72;margin-bottom:36px}
 .hero-btns{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:44px}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:600;font-size:16px;border-radius:var(--rp);cursor:pointer;border:none;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,background .2s}
-.btn-dark{background:var(--dk);color:#fff;padding:18px 36px}
-.btn-dark:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(26,20,16,.28)}
+.btn-dark{background:var(--accent);color:#fff;padding:18px 36px}
+.btn-dark:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(21,94,239,.38)}
 .btn-outline{background:rgba(255,255,255,.3);color:var(--dk);padding:18px 36px;border:1px solid rgba(26,20,16,.14)}
 .btn-outline:hover{background:rgba(255,255,255,.6);transform:translateY(-2px)}
 .btn-glass{background:rgba(255,255,255,.45);backdrop-filter:blur(12px);border:1px solid rgba(214,206,197,.6);color:var(--dk);padding:18px 32px;border-radius:var(--rp);font-family:var(--fh);font-size:16px;font-weight:600;transition:background .2s,transform .3s cubic-bezier(.34,1.56,.64,1);cursor:pointer}
@@ -152,7 +153,7 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 .ft-logo{margin-bottom:13px}
 .ft-tag{font-size:13px;color:var(--lt);line-height:1.65;margin-bottom:18px}
 .ft-soc{display:flex;gap:7px}
-.ft-si{width:34px;height:34px;border-radius:50%;background:var(--dk);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;transition:opacity .15s,transform .25s cubic-bezier(.34,1.56,.64,1)}
+.ft-si{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;transition:opacity .15s,transform .25s cubic-bezier(.34,1.56,.64,1)}
 .ft-si:hover{opacity:.75;transform:translateY(-3px)}
 .ft-links{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
 .ft-ct{font-size:10px;font-weight:700;color:var(--dk);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
@@ -164,7 +165,7 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
 
 /* ACCESSIBILITY */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.skip-link{position:absolute;top:-100%;left:0;z-index:9999;background:var(--dk);color:#fff;padding:12px 20px;font-size:14px;font-weight:600;border-radius:0 0 8px 0;transition:top .2s}
+.skip-link{position:absolute;top:-100%;left:0;z-index:9999;background:var(--accent);color:#fff;padding:12px 20px;font-size:14px;font-weight:600;border-radius:0 0 8px 0;transition:top .2s}
 .skip-link:focus{top:0}
 
 /* RESPONSIVE */
@@ -183,6 +184,7 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
     <a href="index.html#features">Features</a>
     <a href="index.html#benefits">Benefits</a>
     <a href="index.html#pricing">Pricing</a>
+    <a href="blog.html">Blog</a>
     <a href="index.html#contact">Contact</a>
     <a href="about-us.html">About</a>
   </div>
@@ -204,6 +206,7 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
     <a href="index.html#features" class="mm-link">Features <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="index.html#benefits" class="mm-link">Benefits <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="index.html#pricing" class="mm-link">Pricing <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="blog.html" class="mm-link">Blog <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="index.html#contact" class="mm-link">Contact <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="about-us.html" class="mm-link">About <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <button type="button" class="mm-cta" onclick="window.location.href='https://app.tradezlog.com/login'">Sign In →</button>
@@ -410,6 +413,7 @@ nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,1
           <div class="ft-ct">Company</div>
           <a href="index.html">Home</a>
           <a href="about-us.html">About</a>
+          <a href="blog.html">Blog</a>
           <a href="privacy-policy.html">Privacy</a>
           <a href="terms-of-use.html">Terms</a>
         </div>
