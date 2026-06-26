@@ -7,37 +7,13 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tradezlog.com/features</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tradezlog.com/benefits</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://tradezlog.com/pricing</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tradezlog.com/contact</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://tradezlog.com/about</loc>
+    <loc>https://tradezlog.com/about-us.html</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://tradezlog.com/blog</loc>
+    <loc>https://tradezlog.com/blog.html</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -61,13 +37,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tradezlog.com/privacy-policy</loc>
+    <loc>https://tradezlog.com/privacy-policy.html</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://tradezlog.com/terms-of-use</loc>
+    <loc>https://tradezlog.com/terms-of-use.html</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
