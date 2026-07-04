@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LM6X3V04FJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LM6X3V04FJ');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trading Journal for MetaTrader 4 – Analyse Your MT4 Performance</title>
+<meta name="description" content="A trading journal for MetaTrader 4 imports your trade history, adds analytics layers MT4 lacks, and helps you understand which setups and sessions produce consistent profit.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Tradez Log">
+<meta name="theme-color" content="#155eef">
+<link rel="canonical" href="https://tradezlog.com/trading-journal-for-metatrader-4.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Trading Journal for MetaTrader 4 – Analyse Your MT4 Performance">
+<meta property="og:description" content="A trading journal for MetaTrader 4 imports your trade history, adds analytics layers MT4 lacks, and helps you understand which setups and sessions produce consistent profit.">
+<meta property="og:url" content="https://tradezlog.com/trading-journal-for-metatrader-4.html">
+<meta property="og:site_name" content="Tradez Log">
+<meta property="og:image" content="https://tradezlog.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trading Journal for MetaTrader 4 – Analyse Your MT4 Performance">
+<meta name="twitter:description" content="A trading journal for MetaTrader 4 imports your trade history, adds analytics layers MT4 lacks, and helps you understand which setups and sessions produce consistent profit.">
+<meta name="twitter:image" content="https://tradezlog.com/assets/og-image.png">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://tradezlog.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Journal for MetaTrader 4",
+        "item": "https://tradezlog.com/trading-journal-for-metatrader-4.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I export my trade history from MT4?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In MetaTrader 4, open the Terminal (Ctrl+T), click the Account History tab, right-click the trade list, and select 'Save as Detailed Report.' Save the file as HTML or use a third-party tool to convert it to CSV for journal import."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What can a journal show me that MT4 cannot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A trading journal adds win rate by pair, session performance breakdowns, setup tagging, psychology correlation, equity curve analysis, and profit factor calculations \u2014 none of which MT4's native reporting provides."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I journal both manual and EA trades?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. When importing MT4 history, most journals can separate EA trades using the magic number field, allowing you to analyse manual and algorithmic trades independently in the same dashboard."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Tradez Log work with MetaTrader 4?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Tradez Log accepts MetaTrader 4 trade history imports in CSV and HTML formats, automatically mapping all standard MT4 fields and calculating your key performance metrics upon import."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I compare performance across multiple MT4 accounts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can import trade history from multiple MT4 accounts into Tradez Log, then view each account separately or compare them in a consolidated dashboard to identify which account or strategy performs best."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Tradez Log",
+    "description": "Trading journal and analytics platform for serious traders.",
+    "url": "https://tradezlog.com",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web, iOS, Android",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tradez Log",
+      "url": "https://tradezlog.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tradez Log",
+    "url": "https://tradezlog.com",
+    "logo": "https://tradezlog.com/assets/og-image.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/tradez-log/",
+      "https://www.instagram.com/tradez_log"
+    ]
+  }
+]
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--cream:#ffffff;--warm:#f1f5ff;--tan:#dbe6fb;--dk:#0b0f1a;--mid:#454b5c;--lt:#6c7587;--blue:#155eef;--green:#12b76a;--green-l:#e3fbef;--sky:#bcd4ff;--peach:#c8f5dd;--bdr:#c7d3ea;--accent:linear-gradient(135deg,#155eef 0%,#12b76a 100%);--rp:100px;--rlg:28px;--rmd:20px;--fh:"Plus Jakarta Sans",sans-serif;--fb:"DM Sans",sans-serif}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--fb);background:var(--cream);color:var(--dk);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:200;width:min(1100px,calc(100% - 32px));background:rgba(255,255,255,.18);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(214,206,197,.45);border-radius:var(--rp);display:flex;align-items:center;justify-content:space-between;padding:14px 20px;box-shadow:0 2px 24px rgba(26,20,16,.06);transition:background .35s,box-shadow .35s}
+nav.scrolled{background:rgba(255,255,255,.75);box-shadow:0 4px 32px rgba(26,20,16,.1)}
+.nlogo{display:flex;align-items:center;font-family:var(--fh);font-weight:800;font-size:18px;color:var(--dk);gap:8px}
+.nlinks{display:flex;align-items:center;gap:4px}
+.nlinks a{padding:9px 18px;border-radius:var(--rp);font-size:15px;font-weight:500;color:var(--mid);transition:color .15s}
+.nlinks a:hover{color:var(--dk)}
+.ncta{background:var(--accent);color:#fff;padding:13px 28px;border-radius:var(--rp);font-size:15px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;text-decoration:none;display:inline-flex;align-items:center}
+.ncta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(21,94,239,.35)}
+.hamburger{flex-direction:column;justify-content:center;align-items:center;width:40px;height:40px;background:rgba(255,255,255,.6);border:1px solid rgba(214,206,197,.8);border-radius:12px;cursor:pointer;gap:5px;padding:0;transition:background .2s;flex-shrink:0;color:var(--dk);display:none}
+.hamburger.open{background:var(--accent);color:#fff;border-color:transparent}
+.mobile-menu{position:fixed;inset:0;z-index:190;pointer-events:none}
+.mobile-menu-backdrop{position:absolute;inset:0;background:rgba(26,20,16,.25);opacity:0;transition:opacity .3s}
+.mobile-menu-panel{position:absolute;top:0;left:0;right:0;background:rgba(249,248,247,.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(214,206,197,.6);border-radius:0 0 28px 28px;padding:90px 24px 32px;transform:translateY(-105%);transition:transform .45s cubic-bezier(.22,1,.36,1);box-shadow:0 16px 56px rgba(26,20,16,.15);z-index:191}
+.mobile-menu.open{pointer-events:all}
+.mobile-menu.open .mobile-menu-backdrop{opacity:1}
+.mobile-menu.open .mobile-menu-panel{transform:translateY(0)}
+.mm-link{display:flex;align-items:center;justify-content:space-between;padding:15px 4px;font-size:20px;font-weight:700;font-family:var(--fh);color:var(--dk);border-bottom:1px solid rgba(214,206,197,.5);opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s,color .15s}
+.mm-link:hover{color:var(--blue)}
+.mm-cta{display:block;width:100%;margin-top:24px;background:var(--accent);color:#fff;padding:16px;border-radius:var(--rp);font-size:16px;font-weight:600;font-family:var(--fh);border:none;cursor:pointer;text-align:center;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
+.skip-link{position:absolute;top:-100%;left:0;z-index:9999;background:var(--accent);color:#fff;padding:12px 20px;font-size:14px;font-weight:600;border-radius:0 0 8px 0;transition:top .2s}
+.skip-link:focus{top:0}
+.page-wrap{max-width:860px;margin:0 auto;padding:128px 24px 80px}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--lt);margin-bottom:36px;flex-wrap:wrap}
+.breadcrumb a{color:var(--blue)}.breadcrumb a:hover{opacity:.75}
+h1{font-family:var(--fh);font-size:clamp(28px,5vw,52px);font-weight:800;letter-spacing:-.03em;line-height:1.12;color:var(--dk);margin-bottom:18px}
+.hero-desc{font-size:clamp(16px,2vw,20px);color:var(--mid);line-height:1.75;max-width:680px;margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid var(--bdr)}
+.article-body h2{font-family:var(--fh);font-size:clamp(20px,3vw,30px);font-weight:700;color:var(--dk);margin:48px 0 14px;letter-spacing:-.02em;line-height:1.25}
+.article-body h3{font-family:var(--fh);font-size:clamp(17px,2.5vw,22px);font-weight:700;color:var(--dk);margin:32px 0 10px;letter-spacing:-.015em}
+.article-body p{font-size:17px;color:var(--mid);margin-bottom:18px;line-height:1.85}
+.article-body ul,.article-body ol{font-size:17px;color:var(--mid);margin:0 0 18px 26px;line-height:1.85}
+.article-body li{margin-bottom:6px}
+.article-body strong{color:var(--dk);font-weight:600}
+.callout{background:var(--warm);border:1px solid var(--bdr);border-left:4px solid var(--blue);border-radius:var(--rmd);padding:22px 26px;margin:28px 0}
+.callout p{margin:0;font-size:16px;color:var(--mid)}
+.faq-section{margin-top:60px;padding-top:40px;border-top:1px solid var(--bdr)}
+.faq-section h2{font-family:var(--fh);font-size:clamp(20px,3vw,30px);font-weight:700;color:var(--dk);margin-bottom:24px;letter-spacing:-.02em}
+.faq-item{border:1px solid var(--bdr);border-radius:var(--rmd);margin-bottom:10px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;background:rgba(255,255,255,.7);transition:background .2s;gap:12px}
+.faq-q:hover{background:var(--warm)}
+.faq-q-text{font-family:var(--fh);font-size:15px;font-weight:600;color:var(--dk)}
+.faq-icon{font-size:20px;color:var(--lt);transition:transform .3s;flex-shrink:0;line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{font-size:15px;color:var(--mid);line-height:1.75;padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
+.faq-item.open .faq-a{max-height:500px;padding:14px 22px 18px}
+.cta-box{background:linear-gradient(135deg,#d8eaff 0%,#d4fce8 100%);border-radius:var(--rlg);padding:52px 44px;text-align:center;margin-top:68px;border:1px solid var(--bdr)}
+.cta-box h2{font-family:var(--fh);font-size:clamp(22px,3.5vw,36px);font-weight:800;color:var(--dk);margin-bottom:12px;letter-spacing:-.03em}
+.cta-box p{font-size:17px;color:var(--mid);margin-bottom:26px;line-height:1.65}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;padding:16px 34px;border-radius:var(--rp);font-family:var(--fh);font-weight:600;font-size:15px;border:none;cursor:pointer;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;text-decoration:none}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(21,94,239,.38)}
+.related-links{margin-top:52px;padding-top:36px;border-top:1px solid var(--bdr)}
+.related-links h2{font-family:var(--fh);font-size:18px;font-weight:700;color:var(--dk);margin-bottom:16px;letter-spacing:-.02em}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.rel-card{background:var(--warm);border:1px solid var(--bdr);border-radius:var(--rmd);padding:14px 18px;transition:border-color .2s,transform .25s cubic-bezier(.34,1.56,.64,1)}
+.rel-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.rel-card a{font-size:13px;font-weight:600;color:var(--blue)}
+.rel-card p{font-size:12px;color:var(--lt);margin-top:3px}
+footer{background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px solid rgba(214,206,197,.44);border-radius:var(--rlg);margin:60px 16px 24px;padding:46px}
+.ft-in{max-width:1040px;margin:0 auto}
+.ft-top{display:grid;grid-template-columns:240px 1fr;gap:60px;margin-bottom:36px}
+.ft-logo{font-family:var(--fh);font-weight:800;font-size:18px;margin-bottom:12px}
+.ft-tag{font-size:13px;color:var(--lt);line-height:1.65;margin-bottom:16px}
+.ft-soc{display:flex;gap:7px}
+.ft-si{width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;transition:opacity .15s,transform .2s;text-decoration:none}
+.ft-si:hover{opacity:.75;transform:translateY(-2px)}
+.ft-links{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.ft-ct{font-size:10px;font-weight:700;color:var(--dk);text-transform:uppercase;letter-spacing:.12em;margin-bottom:12px}
+.ft-col a{display:block;font-size:14px;color:var(--lt);margin-bottom:8px;transition:color .15s}
+.ft-col a:hover{color:var(--dk)}
+.ft-bot{border-top:1px solid rgba(214,206,197,.5);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--lt)}
+.ft-bot a{color:var(--mid);font-weight:600}
+@media(max-width:1000px){nav{left:12px;right:12px;transform:none;width:calc(100% - 24px);max-width:none}.nlinks{display:none!important}.ncta{display:none!important}.hamburger{display:flex!important}}
+@media(max-width:900px){.ft-top{grid-template-columns:1fr;gap:28px}}
+@media(max-width:600px){footer{margin:40px 8px 14px;padding:26px 18px}.cta-box{padding:34px 20px}.page-wrap{padding:100px 16px 56px}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<nav id="nav">
+  <a href="/" class="nlogo" aria-label="Tradez Log Home">Tradez Log</a>
+  <div class="nlinks">
+    <a href="/#features">Features</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/about-us.html">About</a>
+  </div>
+  <a href="https://app.tradezlog.com/login" class="ncta">Start Free</a>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <svg width="16" height="14" viewBox="0 0 16 14" fill="none"><rect width="16" height="2" rx="1" fill="currentColor"/><rect y="6" width="16" height="2" rx="1" fill="currentColor"/><rect y="12" width="16" height="2" rx="1" fill="currentColor"/></svg>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-backdrop" id="menuBackdrop"></div>
+  <div class="mobile-menu-panel">
+    <a href="/#features" class="mm-link">Features</a>
+    <a href="/#pricing" class="mm-link">Pricing</a>
+    <a href="/blog.html" class="mm-link">Blog</a>
+    <a href="/about-us.html" class="mm-link">About</a>
+    <a href="https://app.tradezlog.com/login" class="mm-cta">Start Free</a>
+  </div>
+</div>
+<main id="main">
+  <div class="page-wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>&#8250;</span><span>Journal for MetaTrader 4</span></nav>
+    <h1>Trading Journal for MetaTrader 4: Find the Edge MT4 Hides</h1>
+    <p class="hero-desc">MetaTrader 4 has been the world's most popular trading platform for decades. But its reporting tools are basic. A trading journal built for MT4 traders extracts deep performance insights from your history.</p>
+    <article class="article-body">
+      <h2>Why MT4's History Tab Is Not Enough</h2>
+      <p>MetaTrader 4's account history is functional but primitive. It shows you a list of closed trades with profit and loss figures, and a basic summary of total deposits, withdrawals, and net profit. For a beginner, this feels like enough. For any trader serious about improvement, it falls well short of what is needed.</p>
+      <p>The core limitation is the absence of any analytical layer. MT4 cannot tell you your win rate on GBPUSD versus EURUSD. It cannot show you whether your strategy performs better in trending or ranging markets. It has no concept of setup quality, emotional state, or time-of-day patterns. A dedicated trading journal fills every one of these gaps.</p>
+      <div class="callout"><p><strong>Key insight:</strong> The gap between MT4's built-in history and a proper trading journal is the gap between knowing your balance and understanding your edge. Only one of those makes you a better trader.</p></div>
+
+      <h2>Exporting Trade History from MT4</h2>
+      <p>To move your MT4 data into a trading journal, open the Terminal window in MT4 (Ctrl+T), click the Account History tab, then right-click anywhere in the trade list. Choose "Save as Report" or "Save as Detailed Report." The detailed report includes commission and swap data alongside the core trade fields.</p>
+      <p>Save the file and import it into your chosen trading journal. Tradez Log and most other dedicated journals accept MT4 CSV and HTML formats. Once imported, your trades populate automatically and you can begin adding the contextual information MT4 never captured: setup name, entry rationale, market structure, and post-trade emotional review.</p>
+
+      <h2>Enriching MT4 Data with Psychology and Context</h2>
+      <p>Raw MT4 export data contains price, time, lots, swap, commission, and profit. Everything else — the story behind the trade — has to be added manually. This is where a trading journal delivers its most unique value: turning a transaction record into a learning document.</p>
+      <p>For each imported trade, consider adding: your pre-trade confidence rating (1-10), the market condition at entry (trending, ranging, breakout), whether the trade followed your documented rules, and a brief note about how you felt during the trade. Even two or three sentences of context per trade will generate powerful patterns when reviewed across 100 or more positions.</p>
+
+      <h2>Performance by Currency Pair and Session Time</h2>
+      <p>The single most actionable analysis for most MT4 forex traders is a breakdown of win rate and average profit by currency pair and by session. This analysis almost always reveals that traders perform dramatically better on two or three pairs and dramatically worse on pairs they trade out of habit or boredom.</p>
+      <p>Session-time analysis is equally revealing. Many traders who feel they trade "all day" discover that 80% of their profits come from a two-hour window around the London open, and that their afternoon trades — placed during lower liquidity and higher spreads — consistently erode those gains. A trading journal makes this pattern visible in minutes.</p>
+      <ul>
+        <li>Run a win rate report filtered by currency pair — drop pairs below 40% win rate or negative expectancy</li>
+        <li>Filter by session to identify your most profitable two-hour trading window</li>
+        <li>Analyse average pip gain by setup type to prioritise your highest-quality entries</li>
+        <li>Check average holding time against profit — are you cutting winners too early?</li>
+      </ul>
+
+      <h2>Strategy Tagging for MT4 Traders</h2>
+      <p>Most MT4 traders run multiple strategies simultaneously — perhaps a trend-following approach on the four-hour chart and a scalping setup on the 15-minute chart. Without tagging, these trades are indistinguishable in your journal. With strategy tags, you can analyse each approach independently and determine which deserves more capital and which should be abandoned.</p>
+      <p>Create a consistent set of setup tags before you start journaling and apply them to every imported trade. Common tags include: "breakout," "pullback to MA," "support bounce," "news fade," and "structure break." Discipline in tagging is what enables meaningful strategy-level analysis three or six months later.</p>
+
+      <h2>Comparing EA Trades vs Manual Trades</h2>
+      <p>Many MT4 traders run at least one Expert Advisor alongside their manual trading. The ability to compare EA performance versus manual performance in a unified dashboard is one of the most powerful features of a dedicated trading journal. You can determine definitively whether your EA is contributing to or detracting from overall account performance.</p>
+      <p>In MT4, EA trades carry a magic number that identifies the advisor. When importing your history, use this field to automatically tag all EA trades. Your journal can then generate a side-by-side comparison of win rate, average profit, maximum drawdown, and profit factor between your manual trades and each EA you run.</p>
+
+      <h2>Tradez Log's MT4 Compatibility</h2>
+      <p>Tradez Log is fully compatible with MetaTrader 4 trade history exports. The import wizard handles both standard and detailed MT4 reports, automatically mapping all key fields and calculating your core performance metrics immediately after import.</p>
+      <p>Once your MT4 history is imported, Tradez Log's dashboard provides win rate by pair, session heatmaps, equity curve visualisation, profit factor calculations, and a setup performance breakdown — everything that MT4 itself cannot offer. Add your psychology tags and setup notes to any imported trade to unlock the full analytical suite.</p>
+    </article>
+    <section class="faq-section" aria-labelledby="faq-h">
+      <h2 id="faq-h">Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">How do I export my trade history from MT4?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">In MetaTrader 4, open the Terminal (Ctrl+T), click the Account History tab, right-click the trade list, and select 'Save as Detailed Report.' Save the file as HTML or use a third-party tool to convert it to CSV for journal import.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">What can a journal show me that MT4 cannot?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">A trading journal adds win rate by pair, session performance breakdowns, setup tagging, psychology correlation, equity curve analysis, and profit factor calculations — none of which MT4's native reporting provides.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">Can I journal both manual and EA trades?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. When importing MT4 history, most journals can separate EA trades using the magic number field, allowing you to analyse manual and algorithmic trades independently in the same dashboard.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">Does Tradez Log work with MetaTrader 4?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. Tradez Log accepts MetaTrader 4 trade history imports in CSV and HTML formats, automatically mapping all standard MT4 fields and calculating your key performance metrics upon import.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">Can I compare performance across multiple MT4 accounts?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. You can import trade history from multiple MT4 accounts into Tradez Log, then view each account separately or compare them in a consolidated dashboard to identify which account or strategy performs best.</div>
+      </div>
+
+    </section>
+    <div class="cta-box">
+      <h2>Start Your Free Trading Journal Today</h2>
+      <p>Join thousands of traders using Tradez Log to track trades, analyse performance, and build consistent profitability — no credit card required.</p>
+      <a href="https://app.tradezlog.com/login" class="cta-btn">Try Tradez Log Free &#8594;</a>
+    </div>
+    <section class="related-links" aria-labelledby="rel-h">
+      <h2 id="rel-h">Explore More</h2>
+      <div class="related-grid"><div class="rel-card"><a href="/trading-journal-for-mt5.html">Journal for MT5</a><p>Unlock the data MT5 hides</p></div><div class="rel-card"><a href="/trading-journal-for-metatrader-5.html">Journal for MetaTrader 5</a><p>Deep MT5 performance analysis</p></div><div class="rel-card"><a href="/forex-trading-journal.html">Forex Trading Journal</a><p>FX-specific journaling guide</p></div><div class="rel-card"><a href="/trading-journal-software.html">Journal Software</a><p>Top tools reviewed</p></div><div class="rel-card"><a href="/trading-analytics.html">Trading Analytics</a><p>Turn data into decisions</p></div></div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="ft-in">
+    <div class="ft-top">
+      <div>
+        <div class="ft-logo">Tradez Log</div>
+        <p class="ft-tag">Your favourite trading journal. Built for active traders who demand clarity and real performance improvements.</p>
+        <div class="ft-soc">
+          <a class="ft-si" href="https://www.linkedin.com/company/tradez-log/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+          <a class="ft-si" href="https://www.instagram.com/tradez_log" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="ft-links">
+        <div class="ft-col"><div class="ft-ct">Pages</div><a href="/">Home</a><a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/about-us.html">About Us</a><a href="/blog.html">Blog</a></div>
+        <div class="ft-col"><div class="ft-ct">Legal</div><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-of-use.html">Terms of Use</a></div>
+      </div>
+    </div>
+    <div class="ft-bot"><span>&#169; 2026 Tradez Log. All rights reserved.</span><a href="/">Built with &#10084; for traders</a></div>
+  </div>
+</footer>
+<script>
+const nav=document.getElementById("nav");
+window.addEventListener("scroll",()=>nav.classList.toggle("scrolled",scrollY>60),{passive:true});
+const hamburger=document.getElementById("hamburger"),mobileMenu=document.getElementById("mobileMenu"),menuBackdrop=document.getElementById("menuBackdrop"),mmItems=mobileMenu.querySelectorAll(".mm-link,.mm-cta");
+function openMenu(){hamburger.classList.add("open");hamburger.setAttribute("aria-expanded","true");mobileMenu.classList.add("open");document.body.style.overflow="hidden";mmItems.forEach((el,i)=>{el.style.transitionDelay=(0.12+i*0.07)+"s";el.style.opacity="1";el.style.transform="translateY(0)";});}
+function closeMenu(){hamburger.classList.remove("open");hamburger.setAttribute("aria-expanded","false");mobileMenu.classList.remove("open");document.body.style.overflow="";mmItems.forEach(el=>{el.style.transitionDelay="0s";el.style.opacity="0";el.style.transform="translateY(10px)";});}
+hamburger.addEventListener("click",()=>mobileMenu.classList.contains("open")?closeMenu():openMenu());
+menuBackdrop.addEventListener("click",closeMenu);
+mmItems.forEach(el=>el.addEventListener("click",closeMenu));
+document.querySelectorAll(".faq-item").forEach(item=>{item.querySelector(".faq-q").addEventListener("click",()=>{const isOpen=item.classList.contains("open");document.querySelectorAll(".faq-item").forEach(i=>i.classList.remove("open"));if(!isOpen)item.classList.add("open");});});
+</script>
+</body>
+</html>
